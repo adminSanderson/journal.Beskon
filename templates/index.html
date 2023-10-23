@@ -1,0 +1,66 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div class="container mt-5">
+        <h2 class="mb-4">Добро пожаловать в журнал о математике</h2>
+
+        <!-- Карточки с математическим контентом -->
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="{{ url_for('static', filename='math_image1.jpg') }}" class="card-img-top" alt="Math Image 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Интересные статьи</h5>
+                        <p class="card-text">Читайте увлекательные математические статьи.</p>
+                        <a href="#" class="btn btn-primary">Подробнее</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="{{ url_for('static', filename='math_image2.jpg') }}" class="card-img-top" alt="Math Image 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Учебные материалы</h5>
+                        <p class="card-text">Изучайте математику с нашими учебными материалами.</p>
+                        <a href="#" class="btn btn-primary">Подробнее</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="{{ url_for('static', filename='math_image3.jpg') }}" class="card-img-top" alt="Math Image 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Форум</h5>
+                        <p class="card-text">Обсуждайте математические темы на нашем форуме.</p>
+                        <a href="#" class="btn btn-primary">Подробнее</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Таблица с последними статьями -->
+        <h3 class="mt-4">Последние статьи</h3>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Заголовок</th>
+                    <th scope="col">Дата</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">1</th>
+                    <td><a href="#">Заголовок статьи 1</a></td>
+                    <td>01.10.2023</td>
+                </tr>
+                <tr>
+                    <th scope="row">2</th>
+                    <td><a href="#">Заголовок статьи 2</a></td>
+                    <td>02.10.2023</td>
+                </tr>
+                <!-- Добавьте дополнительные строки с данными статей по мере необходимости -->
+            </tbody>
+        </table>
+    </div>
+{% endblock %}
